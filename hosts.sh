@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#GoHost shell版
+#shell版hosts下载器
 #版本1.0
 
 #计划任务添加:
