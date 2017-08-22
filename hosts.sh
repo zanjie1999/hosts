@@ -31,16 +31,15 @@ then
 	echo 'Network OK'
 	echo
 #	wget --no-check-certificate https://raw.githubusercontent.com/racaljk/hosts/master/hosts https://raw.githubusercontent.com/sy618/hosts/master/FQ -O $out'hosts'
-#	wget --no-check-certificate https://raw.githubusercontent.com/racaljk/hosts/master/dnsmasq.conf -O $out'dnsmasq.conf'
 
 	wget --no-check-certificate https://raw.githubusercontent.com/googlehosts/hosts/master/hosts-files/hosts -O $out'hosts'
-	wget --no-check-certificate https://raw.githubusercontent.com/googlehosts/hosts/master/hosts-files/dnsmasq.conf -O $out'dnsmasq.conf'
-	/etc/init.d/dnsmasq restart
 
-	echo >>$out'hosts' >>$out'dnsmasq.conf'
-	echo >>$out'hosts' >>$out'dnsmasq.conf'
-	echo '# make by Sparkle ( blog: http://zanjie1999.16mb.com )'>>$out'hosts' >>$out'dnsmasq.conf'
-	echo '# hosts update time: '$time>>$out'hosts' >>$out'dnsmasq.conf'
+	echo >>$out'hosts'
+	echo >>$out'hosts'
+	echo '# make by Sparkle ( blog: http://zanjie1999.16mb.com )'>>$out'hosts'
+	echo '# hosts update time: '$time>>$out'hosts'
+	
+	/etc/init.d/dns-clean start
 else
 	echo
 	echo 'Network ERROR'
