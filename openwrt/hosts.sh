@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #shell版hosts下载器
 #版本2.0
